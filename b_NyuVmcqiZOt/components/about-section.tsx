@@ -10,25 +10,25 @@ const features = [
     icon: Dumbbell,
     title: "Modern Equipment",
     description: "State-of-the-art fitness machines and free weights for every workout style.",
-    color: "from-blue-500 to-indigo-600",
+    color: "from-[#3b82f6] to-[#7c3aed]",
   },
   {
     icon: Users,
     title: "Certified Trainers",
     description: "Expert trainers with years of experience to guide your fitness journey.",
-    color: "from-purple-500 to-pink-600",
+    color: "from-[#7c3aed] to-[#ec4899]",
   },
   {
     icon: Heart,
     title: "Friendly Environment",
     description: "A welcoming community that supports and motivates each other.",
-    color: "from-rose-500 to-orange-600",
+    color: "from-[#ec4899] to-[#be123c]",
   },
   {
     icon: Target,
     title: "Personalized Training",
     description: "Custom workout plans tailored to your specific goals and needs.",
-    color: "from-emerald-500 to-teal-600",
+    color: "from-[#9333ea] to-[#7c3aed]",
   },
 ]
 
@@ -68,12 +68,12 @@ export function AboutSection() {
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-background/98 via-background/95 to-primary/10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0f172a]/95 via-[#0f172a]/90 to-[#7c3aed]/10" />
       </div>
 
       {/* Animated Background Elements */}
-      <div className="absolute top-20 right-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float-slow" />
-      <div className="absolute bottom-20 left-20 w-80 h-80 bg-accent/10 rounded-full blur-3xl animate-float" />
+      <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-[#7c3aed] to-[#ec4899] rounded-full blur-3xl opacity-20 animate-float-slow" />
+      <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-bl from-[#ec4899] to-[#7c3aed] rounded-full blur-3xl opacity-20 animate-float" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">

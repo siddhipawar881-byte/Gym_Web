@@ -10,10 +10,10 @@ import { Input } from "@/components/ui/input"
 import { Dumbbell, ArrowLeft, Calendar, Clock, User, CheckCircle } from "lucide-react"
 
 const trainers = [
-  { id: "1", name: "Sarah Johnson", specialization: "Yoga" },
-  { id: "2", name: "Mike Chen", specialization: "Cardio" },
-  { id: "3", name: "Emma Williams", specialization: "Strength Training" },
-  { id: "4", name: "James Rodriguez", specialization: "Weightlifting" },
+  { id: "1", name: "Priya Sharma", specialization: "Yoga" },
+  { id: "2", name: "Rajesh Kumar", specialization: "Cardio" },
+  { id: "3", name: "Anjali Patel", specialization: "Strength Training" },
+  { id: "4", name: "Arjun Singh", specialization: "Weightlifting" },
 ]
 
 const timeSlots = [

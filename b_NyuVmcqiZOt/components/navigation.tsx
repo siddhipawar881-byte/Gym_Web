@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { useAuth } from "@/components/auth-provider"
 import { Menu, X, Dumbbell, User, LogOut, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -75,12 +76,18 @@ export function Navigation() {
             href="/" 
             className={`flex items-center gap-2 group transition-all duration-500 ${isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}
           >
-            <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-accent transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 shadow-lg shadow-primary/30">
-              <Dumbbell className="h-6 w-6 text-primary-foreground transition-transform group-hover:scale-110" />
-              <div className="absolute inset-0 rounded-xl bg-primary/50 blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="relative flex items-center justify-center transition-all duration-300 group-hover:scale-105">
+              <Image
+                src="/images/logo2.png"
+                alt="Website Logo"
+                width={50}
+                height={50}
+                className="h-10 w-auto sm:h-12 lg:h-14 object-contain"
+                priority
+              />
             </div>
             <span className="text-xl font-bold tracking-tight text-foreground">
-              Power<span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Fit</span>
+              Power<span className="bg-gradient-to-r from-[#7c3aed] via-[#9333ea] to-[#ec4899] bg-clip-text text-transparent">Fit</span>
             </span>
           </Link>
 

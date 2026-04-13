@@ -11,28 +11,28 @@ const contactInfo = [
     label: "Contact Person",
     value: "Rajesh Sharma",
     subValue: "Gym Manager",
-    gradient: "from-blue-500 to-cyan-500",
+    gradient: "from-[#3b82f6] to-[#7c3aed]",
   },
   {
     icon: Mail,
     label: "Email Address",
     value: "info@powerfitgym.in",
     subValue: "support@powerfitgym.in",
-    gradient: "from-purple-500 to-pink-500",
+    gradient: "from-[#7c3aed] to-[#ec4899]",
   },
   {
     icon: Phone,
     label: "Phone Number",
     value: "+91 98765 43210",
     subValue: "+91 98765 43211",
-    gradient: "from-emerald-500 to-teal-500",
+    gradient: "from-[#ec4899] to-[#be123c]",
   },
   {
     icon: MapPin,
     label: "Location",
     value: "42 MG Road, Indiranagar",
     subValue: "Bangalore, Karnataka 560038",
-    gradient: "from-orange-500 to-red-500",
+    gradient: "from-[#9333ea] to-[#7c3aed]",
   },
 ]
 
@@ -94,22 +94,22 @@ export function ContactSection() {
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/90 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0f172a]/95 via-[#0f172a]/90 to-[#0f172a]" />
       </div>
 
       {/* Animated Background Elements */}
-      <div className="absolute top-20 left-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-20 right-20 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-float-delay" />
+      <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-[#7c3aed] to-[#ec4899] rounded-full blur-3xl opacity-20 animate-float" />
+      <div className="absolute bottom-20 right-20 w-72 h-72 bg-gradient-to-bl from-[#ec4899] to-[#7c3aed] rounded-full blur-3xl opacity-20 animate-float-delay" />
       
       {/* Floating Icons */}
       <div className="absolute top-32 right-32 hidden lg:block animate-float-slow">
-        <div className="w-12 h-12 rounded-xl bg-primary/20 backdrop-blur-sm flex items-center justify-center rotate-12">
-          <MessageCircle className="w-6 h-6 text-primary" />
+        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#7c3aed] to-[#ec4899] flex items-center justify-center rotate-12 shadow-lg shadow-purple-500/50">
+          <MessageCircle className="w-6 h-6 text-white" />
         </div>
       </div>
       <div className="absolute bottom-40 left-32 hidden lg:block animate-float">
-        <div className="w-10 h-10 rounded-xl bg-accent/20 backdrop-blur-sm flex items-center justify-center -rotate-12">
-          <Send className="w-5 h-5 text-accent" />
+        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#ec4899] to-[#be123c] flex items-center justify-center -rotate-12 shadow-lg shadow-pink-500/50">
+          <Send className="w-5 h-5 text-white" />
         </div>
       </div>
 

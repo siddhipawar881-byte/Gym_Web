@@ -23,8 +23,8 @@ const plans = [
       "Mobile app access",
     ],
     highlighted: false,
-    gradient: "from-blue-500/20 to-cyan-500/20",
-    iconGradient: "from-blue-500 to-cyan-500",
+    gradient: "from-[#3b82f6]/20 to-[#7c3aed]/20",
+    iconGradient: "from-[#3b82f6] to-[#7c3aed]",
   },
   {
     name: "Subscription Plan",
@@ -41,8 +41,8 @@ const plans = [
       "Guest passes (2/month)",
     ],
     highlighted: true,
-    gradient: "from-primary/20 to-accent/20",
-    iconGradient: "from-primary to-accent",
+    gradient: "from-[#7c3aed]/20 to-[#ec4899]/20",
+    iconGradient: "from-[#7c3aed] to-[#ec4899]",
   },
   {
     name: "Premium Plan",
@@ -60,8 +60,8 @@ const plans = [
       "24/7 gym access",
     ],
     highlighted: false,
-    gradient: "from-amber-500/20 to-orange-500/20",
-    iconGradient: "from-amber-500 to-orange-500",
+    gradient: "from-[#ec4899]/20 to-[#be123c]/20",
+    iconGradient: "from-[#ec4899] to-[#be123c]",
   },
 ]
 
@@ -102,16 +102,16 @@ export function MembershipSection() {
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/98 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0f172a] via-[#1e1b4b]/50 to-[#0f172a]" />
       </div>
 
       {/* Animated Background Elements */}
-      <div className="absolute top-40 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-40 right-10 w-80 h-80 bg-accent/10 rounded-full blur-3xl animate-float-delay" />
+      <div className="absolute top-40 left-10 w-72 h-72 bg-gradient-to-br from-[#7c3aed] to-[#ec4899] rounded-full blur-3xl opacity-20 animate-float" />
+      <div className="absolute bottom-40 right-10 w-80 h-80 bg-gradient-to-bl from-[#ec4899] to-[#7c3aed] rounded-full blur-3xl opacity-20 animate-float-delay" />
       
       {/* Decorative Elements */}
-      <div className="absolute top-20 right-20 w-4 h-4 bg-primary rounded-full animate-ping" />
-      <div className="absolute bottom-20 left-20 w-3 h-3 bg-accent rounded-full animate-ping" style={{ animationDelay: '1s' }} />
+      <div className="absolute top-20 right-20 w-4 h-4 bg-[#7c3aed] rounded-full animate-ping" />
+      <div className="absolute bottom-20 left-20 w-3 h-3 bg-[#ec4899] rounded-full animate-ping" style={{ animationDelay: '1s' }} />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}

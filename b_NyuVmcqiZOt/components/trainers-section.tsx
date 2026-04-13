@@ -31,40 +31,40 @@ function InstagramIcon({ className }: { className?: string }) {
 
 const trainers = [
   {
-    name: "Sarah Johnson",
+    name: "Priya Sharma",
     specialization: "Yoga",
     experience: "8 years",
     bio: "Certified yoga instructor passionate about mindfulness and flexibility training.",
     image: "https://images.unsplash.com/photo-1594381898411-846e7d193883?w=400&h=500&fit=crop",
-    instagram: "@sarahyoga",
-    color: "from-emerald-500 to-teal-600",
+    instagram: "@priyayoga",
+    color: "from-[#3b82f6] to-[#7c3aed]",
   },
   {
-    name: "Mike Chen",
+    name: "Rajesh Kumar",
     specialization: "Cardio",
     experience: "6 years",
     bio: "High-energy cardio specialist helping members achieve their endurance goals.",
     image: "https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=400&h=500&fit=crop",
-    instagram: "@mikefitness",
-    color: "from-orange-500 to-red-600",
+    instagram: "@rajeshfitness",
+    color: "from-[#7c3aed] to-[#ec4899]",
   },
   {
-    name: "Emma Williams",
+    name: "Anjali Patel",
     specialization: "Strength Training",
     experience: "10 years",
     bio: "Strength coach dedicated to building power and proper form in every workout.",
     image: "https://images.unsplash.com/photo-1579758629938-03607ccdbaba?w=400&h=500&fit=crop",
-    instagram: "@emmastrong",
-    color: "from-blue-500 to-indigo-600",
+    instagram: "@anjalistrong",
+    color: "from-[#ec4899] to-[#be123c]",
   },
   {
-    name: "James Rodriguez",
+    name: "Arjun Singh",
     specialization: "Weightlifting",
     experience: "12 years",
     bio: "Olympic weightlifting coach with a track record of producing champions.",
     image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=500&fit=crop",
-    instagram: "@jameslifts",
-    color: "from-purple-500 to-pink-600",
+    instagram: "@arjunlifts",
+    color: "from-[#9333ea] to-[#7c3aed]",
   },
 ]
 
@@ -107,21 +107,21 @@ export function TrainersSection() {
       className="relative py-20 lg:py-32 overflow-hidden"
     >
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/30 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0f172a] via-[#1e1b4b]/30 to-[#0f172a]" />
       
       {/* Animated Background Elements */}
-      <div className="absolute top-20 right-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-40 left-20 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-float-delay" />
+      <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-[#7c3aed] to-[#ec4899] rounded-full blur-3xl opacity-20 animate-float" />
+      <div className="absolute bottom-40 left-20 w-72 h-72 bg-gradient-to-bl from-[#ec4899] to-[#7c3aed] rounded-full blur-3xl opacity-20 animate-float-delay" />
       
       {/* Floating Icons */}
       <div className="absolute top-32 left-20 hidden lg:block animate-float-slow">
-        <div className="w-14 h-14 rounded-2xl bg-primary/20 backdrop-blur-sm flex items-center justify-center rotate-12">
-          <Users className="w-7 h-7 text-primary" />
+        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#7c3aed] to-[#ec4899] flex items-center justify-center rotate-12 shadow-lg shadow-purple-500/50">
+          <Users className="w-7 h-7 text-white" />
         </div>
       </div>
       <div className="absolute bottom-32 right-32 hidden lg:block animate-float">
-        <div className="w-12 h-12 rounded-2xl bg-accent/20 backdrop-blur-sm flex items-center justify-center -rotate-12">
-          <Award className="w-6 h-6 text-accent" />
+        <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#ec4899] to-[#be123c] flex items-center justify-center -rotate-12 shadow-lg shadow-pink-500/50">
+          <Award className="w-6 h-6 text-white" />
         </div>
       </div>
 

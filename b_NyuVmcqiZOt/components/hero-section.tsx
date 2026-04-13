@@ -134,37 +134,37 @@ export function HeroSection() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/80 to-primary/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0f172a]/70 via-[#1e1b4b]/50 to-[#7c3aed]/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
       </div>
 
       {/* Animated Background Elements */}
       <div 
-        className="absolute top-20 left-10 w-72 h-72 bg-primary/30 rounded-full blur-3xl animate-float"
+        className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-[#7c3aed] to-[#ec4899] rounded-full blur-3xl opacity-40 animate-float"
         style={{ transform: `translate(${mousePosition.x * 0.5}px, ${mousePosition.y * 0.5}px)` }}
       />
       <div 
-        className="absolute bottom-20 right-10 w-96 h-96 bg-accent/30 rounded-full blur-3xl animate-float-delay"
+        className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-bl from-[#ec4899] to-[#7c3aed] rounded-full blur-3xl opacity-40 animate-float-delay"
         style={{ transform: `translate(${mousePosition.x * -0.5}px, ${mousePosition.y * -0.5}px)` }}
       />
       <div 
-        className="absolute top-1/2 left-1/4 w-48 h-48 bg-primary/20 rounded-full blur-2xl animate-float-slow"
+        className="absolute top-1/2 left-1/4 w-48 h-48 bg-gradient-to-br from-[#3b82f6] to-[#7c3aed] rounded-full blur-2xl opacity-40 animate-float-slow"
       />
       
       {/* Floating Icons */}
       <div className="absolute top-32 right-20 hidden lg:block animate-float">
-        <div className="w-16 h-16 rounded-2xl bg-primary/20 backdrop-blur-sm flex items-center justify-center rotate-12 hover-glow transition-all">
-          <Dumbbell className="w-8 h-8 text-primary" />
+        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#7c3aed] to-[#ec4899] flex items-center justify-center rotate-12 hover-glow transition-all shadow-lg shadow-purple-500/50">
+          <Dumbbell className="w-8 h-8 text-white" />
         </div>
       </div>
       <div className="absolute bottom-40 left-20 hidden lg:block animate-float-delay">
-        <div className="w-14 h-14 rounded-2xl bg-accent/20 backdrop-blur-sm flex items-center justify-center -rotate-12 hover-glow transition-all">
-          <Flame className="w-7 h-7 text-accent" />
+        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#ec4899] to-[#be123c] flex items-center justify-center -rotate-12 hover-glow transition-all shadow-lg shadow-pink-500/50">
+          <Flame className="w-7 h-7 text-white" />
         </div>
       </div>
       <div className="absolute top-1/2 right-32 hidden lg:block animate-float-slow">
-        <div className="w-12 h-12 rounded-2xl bg-primary/20 backdrop-blur-sm flex items-center justify-center rotate-6 hover-glow transition-all">
-          <Zap className="w-6 h-6 text-primary" />
+        <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#3b82f6] to-[#7c3aed] flex items-center justify-center rotate-6 hover-glow transition-all shadow-lg shadow-blue-500/50">
+          <Zap className="w-6 h-6 text-white" />
         </div>
       </div>
 

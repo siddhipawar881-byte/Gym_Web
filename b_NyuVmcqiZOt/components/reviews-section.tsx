@@ -113,22 +113,22 @@ export function ReviewsSection() {
       className="relative py-20 lg:py-32 overflow-hidden"
     >
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-secondary/30 via-background to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#1e1b4b]/30 via-[#0f172a] to-[#0f172a]" />
       
       {/* Animated Background Elements */}
-      <div className="absolute top-20 left-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-40 right-20 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-float-delay" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float-slow" />
+      <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-[#7c3aed] to-[#ec4899] rounded-full blur-3xl opacity-20 animate-float" />
+      <div className="absolute bottom-40 right-20 w-72 h-72 bg-gradient-to-bl from-[#ec4899] to-[#7c3aed] rounded-full blur-3xl opacity-20 animate-float-delay" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-[#7c3aed] to-[#9333ea] rounded-full blur-3xl opacity-10 animate-float-slow" />
       
       {/* Floating Icons */}
       <div className="absolute top-40 right-32 hidden lg:block animate-float">
-        <div className="w-12 h-12 rounded-xl bg-primary/20 backdrop-blur-sm flex items-center justify-center rotate-12">
-          <MessageSquare className="w-6 h-6 text-primary" />
+        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#7c3aed] to-[#ec4899] flex items-center justify-center rotate-12 shadow-lg shadow-purple-500/50">
+          <MessageSquare className="w-6 h-6 text-white" />
         </div>
       </div>
       <div className="absolute bottom-32 left-32 hidden lg:block animate-float-slow">
-        <div className="w-10 h-10 rounded-xl bg-accent/20 backdrop-blur-sm flex items-center justify-center -rotate-12">
-          <Star className="w-5 h-5 text-accent fill-accent" />
+        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#ec4899] to-[#be123c] flex items-center justify-center -rotate-12 shadow-lg shadow-pink-500/50">
+          <Star className="w-5 h-5 text-white fill-white" />
         </div>
       </div>
 

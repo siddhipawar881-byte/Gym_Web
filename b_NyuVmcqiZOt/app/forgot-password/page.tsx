@@ -46,7 +46,7 @@ export default function ForgotPasswordPage() {
       await new Promise((resolve) => setTimeout(resolve, 1200))
 
       if (mockUsers.includes(email.toLowerCase())) {
-        setSuccess("Password reset link sent to your email")
+        setSuccess("OTP sent to your email")
       } else {
         setError("Email not found")
       }
@@ -111,11 +111,11 @@ export default function ForgotPasswordPage() {
             </div>
 
             <Button
-              type="submit"
+              type="button"
               className="w-full h-12 font-semibold text-base bg-primary hover:bg-primary/90 shadow-lg shadow-primary/25 transition-all duration-300 hover:shadow-xl hover:shadow-primary/30"
-              disabled={isLoading}
+              onClick={(e) => e.preventDefault()}
             >
-              {isLoading ? "Sending link..." : "Send Reset Link"}
+              Send OTP
             </Button>
           </form>
 

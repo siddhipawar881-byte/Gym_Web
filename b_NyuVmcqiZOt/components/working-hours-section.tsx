@@ -10,21 +10,21 @@ const schedule = [
     hours: "5:00 AM - 11:00 PM",
     highlight: true,
     icon: Sun,
-    gradient: "from-blue-500 to-indigo-600",
+    gradient: "from-[#3b82f6] to-[#7c3aed]",
   },
   {
     days: "Saturday",
     hours: "6:00 AM - 10:00 PM",
     highlight: false,
     icon: Sunrise,
-    gradient: "from-orange-500 to-amber-500",
+    gradient: "from-[#7c3aed] to-[#ec4899]",
   },
   {
     days: "Sunday",
     hours: "7:00 AM - 9:00 PM",
     highlight: false,
     icon: Moon,
-    gradient: "from-purple-500 to-pink-500",
+    gradient: "from-[#ec4899] to-[#be123c]",
   },
 ]
 
@@ -53,14 +53,14 @@ export function WorkingHoursSection() {
   return (
     <section ref={sectionRef} className="relative py-20 lg:py-24 overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-secondary/30 to-background" />
-      <div className="absolute top-20 right-20 w-48 h-48 bg-primary/10 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-20 left-20 w-56 h-56 bg-accent/10 rounded-full blur-3xl animate-float-delay" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#1e1b4b]/30 to-[#0f172a]" />
+      <div className="absolute top-20 right-20 w-48 h-48 bg-gradient-to-br from-[#7c3aed] to-[#ec4899] rounded-full blur-3xl opacity-20 animate-float" />
+      <div className="absolute bottom-20 left-20 w-56 h-56 bg-gradient-to-bl from-[#ec4899] to-[#7c3aed] rounded-full blur-3xl opacity-20 animate-float-delay" />
       
       {/* Floating Clock Icon */}
       <div className="absolute top-32 left-20 hidden lg:block animate-float-slow">
-        <div className="w-14 h-14 rounded-2xl bg-primary/20 backdrop-blur-sm flex items-center justify-center rotate-12">
-          <Clock className="w-7 h-7 text-primary" />
+        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#7c3aed] to-[#ec4899] flex items-center justify-center rotate-12 shadow-lg shadow-purple-500/50">
+          <Clock className="w-7 h-7 text-white" />
         </div>
       </div>
 
