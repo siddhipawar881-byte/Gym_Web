@@ -19,7 +19,7 @@ A modern, responsive, and visually engaging gym website designed to provide user
 * HTML5
 * CSS3 / Tailwind CSS
 * JavaScript
-* React / Next.js (if used)
+* React / Next.js 
 * Git & GitHub
 
 📂 Project Structure
