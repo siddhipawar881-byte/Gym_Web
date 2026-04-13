@@ -33,6 +33,7 @@ const quickLinks = [
   { name: "Trainers", href: "#trainers" },
   { name: "Classes", href: "#classes" },
   { name: "Reviews", href: "#reviews" },
+  { name: "Terms", href: "/terms-services" },
 ]
 
 const services = [
@@ -148,13 +149,23 @@ export function Footer() {
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={link.name}>
-                  <button
-                    onClick={() => scrollToSection(link.href)}
-                    className="text-background/70 hover:text-primary hover:translate-x-2 transition-all duration-300 inline-block"
-                    style={{ transitionDelay: `${index * 50}ms` }}
-                  >
-                    {link.name}
-                  </button>
+                  {link.href.startsWith("#") ? (
+                    <button
+                      onClick={() => scrollToSection(link.href)}
+                      className="text-background/70 hover:text-primary hover:translate-x-2 transition-all duration-300 inline-block"
+                      style={{ transitionDelay: `${index * 50}ms` }}
+                    >
+                      {link.name}
+                    </button>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-background/70 hover:text-primary hover:translate-x-2 transition-all duration-300 inline-block"
+                      style={{ transitionDelay: `${index * 50}ms` }}
+                    >
+                      {link.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

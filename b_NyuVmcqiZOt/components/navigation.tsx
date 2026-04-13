@@ -21,6 +21,7 @@ const navItems = [
   { name: "Classes Schedule", href: "#classes" },
   { name: "Reviews", href: "#reviews" },
   { name: "Contact", href: "#contact" },
+  { name: "Terms", href: "/terms-services" },
 ]
 
 export function Navigation() {
@@ -94,36 +95,48 @@ export function Navigation() {
           {/* Desktop Navigation */}
           <div className={`hidden lg:flex lg:items-center lg:gap-1 transition-all duration-500 delay-100 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
             {navItems.map((item, index) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg group`}
-                style={{ animationDelay: `${index * 50}ms` }}
-              >
-                <span className={`relative z-10 transition-colors duration-300 ${
-                  activeSection === item.href.replace("#", "")
-                    ? "text-primary"
-                    : "text-foreground/80 group-hover:text-primary"
-                }`}>
-                  {item.name}
-                </span>
-                
-                {/* Hover Background */}
-                <span className={`absolute inset-0 rounded-lg transition-all duration-300 ${
-                  activeSection === item.href.replace("#", "")
-                    ? "bg-primary/10"
-                    : "bg-transparent group-hover:bg-primary/5"
-                }`} />
-                
-                {/* Active Indicator */}
-                <span
-                  className={`absolute bottom-0 left-1/2 h-0.5 bg-gradient-to-r from-primary to-accent transition-all duration-300 -translate-x-1/2 rounded-full ${
+              item.href.startsWith("#") ? (
+                <button
+                  key={item.name}
+                  onClick={() => scrollToSection(item.href)}
+                  className={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg group`}
+                  style={{ animationDelay: `${index * 50}ms` }}
+                >
+                  <span className={`relative z-10 transition-colors duration-300 ${
                     activeSection === item.href.replace("#", "")
-                      ? "w-3/4 opacity-100"
-                      : "w-0 opacity-0 group-hover:w-1/2 group-hover:opacity-50"
-                  }`}
-                />
-              </button>
+                      ? "text-primary"
+                      : "text-foreground/80 group-hover:text-primary"
+                  }`}>
+                    {item.name}
+                  </span>
+
+                  <span className={`absolute inset-0 rounded-lg transition-all duration-300 ${
+                    activeSection === item.href.replace("#", "")
+                      ? "bg-primary/10"
+                      : "bg-transparent group-hover:bg-primary/5"
+                  }`} />
+
+                  <span
+                    className={`absolute bottom-0 left-1/2 h-0.5 bg-gradient-to-r from-primary to-accent transition-all duration-300 -translate-x-1/2 rounded-full ${
+                      activeSection === item.href.replace("#", "")
+                        ? "w-3/4 opacity-100"
+                        : "w-0 opacity-0 group-hover:w-1/2 group-hover:opacity-50"
+                    }`}
+                  />
+                </button>
+              ) : (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg group`}
+                  style={{ animationDelay: `${index * 50}ms` }}
+                >
+                  <span className="relative z-10 transition-colors duration-300 text-foreground/80 group-hover:text-primary">
+                    {item.name}
+                  </span>
+                  <span className="absolute inset-0 rounded-lg transition-all duration-300 bg-transparent group-hover:bg-primary/5" />
+                </Link>
+              )
             ))}
           </div>
 
@@ -184,22 +197,37 @@ export function Navigation() {
       <div className={`lg:hidden overflow-hidden transition-all duration-500 ease-out ${isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="bg-background/95 backdrop-blur-md border-b border-border/50 px-4 py-4 space-y-2">
           {navItems.map((item, index) => (
-            <button
-              key={item.name}
-              onClick={() => scrollToSection(item.href)}
-              className={`block w-full text-left px-4 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                activeSection === item.href.replace("#", "")
-                  ? "bg-gradient-to-r from-primary/10 to-accent/10 text-primary"
-                  : "text-foreground hover:bg-primary/5 hover:translate-x-2"
-              }`}
-              style={{ 
-                transitionDelay: isOpen ? `${index * 50}ms` : '0ms',
-                opacity: isOpen ? 1 : 0,
-                transform: isOpen ? 'translateX(0)' : 'translateX(-20px)'
-              }}
-            >
-              {item.name}
-            </button>
+            item.href.startsWith("#") ? (
+              <button
+                key={item.name}
+                onClick={() => scrollToSection(item.href)}
+                className={`block w-full text-left px-4 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  activeSection === item.href.replace("#", "")
+                    ? "bg-gradient-to-r from-primary/10 to-accent/10 text-primary"
+                    : "text-foreground hover:bg-primary/5 hover:translate-x-2"
+                }`}
+                style={{ 
+                  transitionDelay: isOpen ? `${index * 50}ms` : '0ms',
+                  opacity: isOpen ? 1 : 0,
+                  transform: isOpen ? 'translateX(0)' : 'translateX(-20px)'
+                }}
+              >
+                {item.name}
+              </button>
+            ) : (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`block w-full text-left px-4 py-3 rounded-xl font-semibold transition-all duration-300 text-foreground hover:bg-primary/5 hover:translate-x-2`}
+                style={{ 
+                  transitionDelay: isOpen ? `${index * 50}ms` : '0ms',
+                  opacity: isOpen ? 1 : 0,
+                  transform: isOpen ? 'translateX(0)' : 'translateX(-20px)'
+                }}
+              >
+                {item.name}
+              </Link>
+            )
           ))}
           <div className="pt-4 border-t border-border/50 space-y-2">
             {isAuthenticated ? (
